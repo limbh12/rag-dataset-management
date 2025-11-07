@@ -1,11 +1,147 @@
 
   # RAG Dataset Management
 
-  This is a code bundle for RAG Dataset Management. The original project is available at https://www.figma.com/design/4IpmelqDzQeFpauUHuhgnz/RAG-Dataset-Management.
+RAG(Retrieval-Augmented Generation) 데이터셋을 효율적으로 관리하는 웹 기반 애플리케이션입니다. 벡터 데이터베이스와 문서 임베딩을 관리하고, RAG 시스템의 데이터 품질을 모니터링할 수 있습니다.
 
-  ## Running the code
+원본 프로젝트: [Figma Design](https://www.figma.com/design/4IpmelqDzQeFpauUHuhgnz/RAG-Dataset-Management)
 
-  Run `npm i` to install the dependencies.
+## ✨ 주요 기능
 
-  Run `npm run dev` to start the development server.
+- **📊 대시보드**: 실시간 통계 및 성능 모니터링
+- **📁 데이터셋 관리**: 문서 업로드, 조직, 버전 관리
+- **🔍 벡터 관리**: 다양한 임베딩 모델 지원 및 벡터 임베딩 생성
+- **⚙️ 품질 관리**: 임베딩 품질 분석 및 개선
+- **🎨 현대적인 UI**: 반응형 디자인과 직관적인 사용자 경험
+
+## 🛠️ 기술 스택
+
+- **프론트엔드**: React 18.3, TypeScript
+- **빌드 도구**: Vite
+- **UI 라이브러리**: shadcn/ui, Radix UI
+- **스타일링**: Tailwind CSS
+- **차트**: Recharts
+- **아이콘**: Lucide React
+
+## 🚀 시작하기
+
+### 사전 요구사항
+
+- Node.js v16 이상
+- npm 또는 yarn
+
+### 설치 및 실행
+
+```bash
+# 의존성 설치
+npm install
+
+# 개발 서버 시작
+npm run dev
+
+# 프로덕션 빌드
+npm run build
+
+# 프로덕션 프리뷰
+npm run preview
+```
+
+개발 서버는 기본적으로 `http://localhost:5173`에서 실행됩니다.
+
+## 📁 프로젝트 구조
+
+```
+src/
+├── App.tsx                 # 메인 애플리케이션
+├── main.tsx               # 엔트리 포인트
+├── components/
+│   ├── Dashboard.tsx      # 대시보드 뷰
+│   ├── DatasetList.tsx    # 데이터셋 목록
+│   ├── DatasetDetail.tsx  # 데이터셋 상세
+│   ├── VectorManagement.tsx # 벡터 관리
+│   ├── Settings.tsx       # 설정
+│   ├── Sidebar.tsx        # 네비게이션
+│   └── ui/                # 재사용 가능한 UI 컴포넌트
+├── guidelines/            # 프로젝트 문서
+└── styles/               # 스타일 파일
+```
+
+## 📖 문서
+
+자세한 개발 가이드와 프로젝트 지침은 [Guidelines.md](./guidelines/Guidelines.md)를 참조하세요.
+
+## 🎯 주요 화면
+
+- **Dashboard**: 전체 통계, 최근 활동, 성능 차트
+- **Datasets**: 데이터셋 목록 및 관리
+- **Dataset Detail**: 개별 데이터셋 상세 정보 및 문서 관리
+- **Vector Management**: 벡터 임베딩 관리 및 모니터링
+- **Settings**: 시스템 설정 및 환경 구성
+
+## 🔧 개발 가이드
+
+### 코드 스타일
+
+- TypeScript를 사용한 타입 안전성 확보
+- 함수형 컴포넌트와 React Hooks 사용
+- Tailwind CSS를 활용한 유틸리티 우선 스타일링
+- shadcn/ui 컴포넌트 재사용
+
+### 환경 변수
+
+`.env.local` 파일을 생성하여 환경 변수를 설정하세요:
+
+```env
+VITE_API_URL=your_api_url
+VITE_EMBEDDING_API_KEY=your_api_key
+```
+
+## 🚢 배포
+
+### 권장 플랫폼
+
+- [Vercel](https://vercel.com) (추천)
+- [Netlify](https://netlify.com)
+- AWS S3 + CloudFront
+- GitHub Pages
+
+### 빌드
+
+```bash
+npm run build
+```
+
+빌드된 파일은 `dist/` 디렉토리에 생성됩니다.
+
+## 🤝 기여하기
+
+1. 브랜치 생성 (`git checkout -b feature/AmazingFeature`)
+2. 변경사항 커밋 (`git commit -m 'feat: Add some AmazingFeature'`)
+3. 브랜치에 푸시 (`git push origin feature/AmazingFeature`)
+4. Pull Request 생성
+
+### 커밋 메시지 규칙
+
+- `feat`: 새로운 기능 추가
+- `fix`: 버그 수정
+- `docs`: 문서 수정
+- `style`: 코드 포맷팅
+- `refactor`: 코드 리팩토링
+- `test`: 테스트 추가
+- `chore`: 빌드 작업, 패키지 설정
+
+## 📝 라이선스
+
+이 프로젝트는 프라이빗 프로젝트입니다.
+
+## 🔗 관련 링크
+
+- [React 문서](https://react.dev/)
+- [Vite 문서](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [자세한 가이드라인](./guidelines/Guidelines.md)
+
+---
+
+**문서 업데이트**: 2025년 11월 7일
   
